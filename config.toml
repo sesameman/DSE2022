@@ -63,14 +63,14 @@ bigm = 1
 # masscutoff = 7
 
 [readsetting]
-readmode = 1
+readmode = 3
 kstep = 128
 zstep = 8
-Pstep = 30
+Pstep = 10
 logofcutoff = 4
 quarkintstep = 256
 repoint = 19.0
 quarkmass = 0.003
-epsilon = 0.3
+epsilon = 1.0
 
 # bigm = 13

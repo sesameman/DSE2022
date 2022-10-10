@@ -84,6 +84,10 @@ F1=zeros(kstep,zstep)
 F2=zeros(kstep,zstep)
 F3=zeros(kstep,zstep)
 F4=zeros(kstep,zstep)
+F5=zeros(kstep,zstep)
+F6=zeros(kstep,zstep)
+F7=zeros(kstep,zstep)
+F8=zeros(kstep,zstep)
 
 if dataset["mesonBSE"]["mesonmode"] == 1 | dataset["mesonBSE"]["mesonmode"] == 2
     for u=1:4*dim
@@ -135,22 +139,22 @@ elseif dataset["mesonBSE"]["mesonmode"] == 3
             u1=u-4*dim
             nk=((u1-1)÷zstep+1)
             nz=((u1-1)%zstep+1)
-            F4[nk,nz]=solution[u]
+            F5[nk,nz]=solution[u]
         elseif u<=6*dim
             u1=u-5*dim
             nk=((u1-1)÷zstep+1)
             nz=((u1-1)%zstep+1)
-            F4[nk,nz]=solution[u]
+            F6[nk,nz]=solution[u]
         elseif u<=7*dim
             u1=u-6*dim
             nk=((u1-1)÷zstep+1)
             nz=((u1-1)%zstep+1)
-            F4[nk,nz]=solution[u]
+            F7[nk,nz]=solution[u]
         elseif u<=8*dim
             u1=u-7*dim
             nk=((u1-1)÷zstep+1)
             nz=((u1-1)%zstep+1)
-            F4[nk,nz]=solution[u]
+            F8[nk,nz]=solution[u]
         end
     end
 end

@@ -13,7 +13,7 @@ if ispath("data/vector_BSE/meson-$kstep-$zstep-$Pstep-$quarkm-$logofcutoff-$quar
         # 求解函数
         include(joinpath(pwd(),"src/mesonfile/solve_kernel.jl"))
         # 保存文件
-        jldsave("data/vector_BSE/meson-$kstep-$zstep-$Pstep-$quarkm-$logofcutoff-$quarkintstep-$quarkrepoint-$epsilon/P&F1-4_$indexforp2-$Pstep.jld2";P2, F1, F2, F3, F4)
+        jldsave("data/vector_BSE/meson-$kstep-$zstep-$Pstep-$quarkm-$logofcutoff-$quarkintstep-$quarkrepoint-$epsilon/P&F1-4_$indexforp2-$Pstep.jld2";P2, F1, F2, F3, F4,F5,F6,F7,F8)
         # print("mesonBSA--$P2 for $indexforp2/$Pstep done, takes",round((time()-timetest1)*100)/100,"s \n")
     end # for
 else # 
