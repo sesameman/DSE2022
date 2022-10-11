@@ -40,11 +40,10 @@ repoint = 19.0
 # m2^2=m^2+100    ->   m2=10.000000647999979
 # m1^2=m^2+2*10^5  ->   m1=447.21359551444766   
 # m2^2=m^2+100^5   ->   m2=316.2277660373295
-quarkmass = 0.003
+quarkmass = 0.0036
 
 [mesonBSE]
-tailed = 1
-epsilon = 1.0 
+epsilon = 1
 kstep = 128
 zstep = 8
 Pstep = 10
@@ -54,6 +53,7 @@ logofcutoff = 4
 # mesonmode = 1 means pseudoscalar meson·
 # mesonmode = 2 means scalar meson
 # mesonmode = 3 means vector meson
+# mesonmode = 4 means axial-vector meson
 mesonmode = 3
 
 [subterm]
@@ -63,14 +63,14 @@ bigm = 1
 # masscutoff = 7
 
 [readsetting]
-readmode = 3
-kstep = 128
+readmode = 1
+kstep = 32
 zstep = 8
 Pstep = 10
 logofcutoff = 4
 quarkintstep = 256
 repoint = 19.0
-quarkmass = 0.003
-epsilon = 1.0
+quarkmass = 0.0036
+epsilon = 0
 
 # bigm = 13

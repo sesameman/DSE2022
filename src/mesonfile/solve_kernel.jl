@@ -31,7 +31,7 @@ elseif dataset["mesonBSE"]["mesonmode"] == 2
                  getkernel(3,1) getkernel(3,2) getkernel(3,3) getkernel(3,4);
                  getkernel(4,1) getkernel(4,2) getkernel(4,3) getkernel(4,4)]
                  right=[z4*ones(dim) ;zeros(3*dim)]
-elseif dataset["mesonBSE"]["mesonmode"] == 3
+elseif (dataset["mesonBSE"]["mesonmode"] == 3)|(dataset["mesonBSE"]["mesonmode"] == 4)
     kernelsolve=[getkernel(1,1) getkernel(1,2) getkernel(1,3) getkernel(1,4) getkernel(1,5) getkernel(1,6) getkernel(1,7) getkernel(1,8) ;
                  getkernel(2,1) getkernel(2,2) getkernel(2,3) getkernel(2,4) getkernel(2,5) getkernel(2,6) getkernel(2,7) getkernel(2,8) ;
                  getkernel(3,1) getkernel(3,2) getkernel(3,3) getkernel(3,4) getkernel(3,5) getkernel(3,6) getkernel(3,7) getkernel(3,8) ;
@@ -89,7 +89,7 @@ F6=zeros(kstep,zstep)
 F7=zeros(kstep,zstep)
 F8=zeros(kstep,zstep)
 
-if dataset["mesonBSE"]["mesonmode"] == 1 | dataset["mesonBSE"]["mesonmode"] == 2
+if (dataset["mesonBSE"]["mesonmode"] == 1) | (dataset["mesonBSE"]["mesonmode"] == 2)
     for u=1:4*dim
         if u<=dim
             u1=u
@@ -113,7 +113,7 @@ if dataset["mesonBSE"]["mesonmode"] == 1 | dataset["mesonBSE"]["mesonmode"] == 2
             F4[nk,nz]=solution[u]
         end
     end
-elseif dataset["mesonBSE"]["mesonmode"] == 3
+elseif (dataset["mesonBSE"]["mesonmode"] == 3)|(dataset["mesonBSE"]["mesonmode"] == 4)
     for u=1:8*dim
         if u<=dim
             u1=u

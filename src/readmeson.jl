@@ -98,7 +98,7 @@ F1pq=zeros(Pstep,kstep);
 F2pq=zeros(Pstep,kstep);
 F3pq=zeros(Pstep,kstep);
 F4pq=zeros(Pstep,kstep);
-if dataset["readsetting"]["readmode"] == 3
+if (dataset["mesonBSE"]["mesonmode"] == 3)|(dataset["mesonBSE"]["mesonmode"] == 4)
     F5pq=zeros(Pstep,kstep);
     F6pq=zeros(Pstep,kstep);
     F7pq=zeros(Pstep,kstep);
@@ -112,10 +112,12 @@ for i=1:Pstep
             F2pq[i,j] += weightz[m]*F2k[i,j,m]*2/pi
             F3pq[i,j] += weightz[m]*F3k[i,j,m]*2/pi
             F4pq[i,j] += weightz[m]*F4k[i,j,m]*2/pi
+            if d(dataset["mesonBSE"]["mesonmode"] == 3)|(dataset["mesonBSE"]["mesonmode"] == 4)
             F5pq[i,j] += weightz[m]*F5k[i,j,m]*2/pi
             F6pq[i,j] += weightz[m]*F6k[i,j,m]*2/pi
             F7pq[i,j] += weightz[m]*F7k[i,j,m]*2/pi
             F8pq[i,j] += weightz[m]*F8k[i,j,m]*2/pi
+            end
             # f_gammaPq[i,j] += weightz[m]*(P2[i]*A2[i,j,m]*((F1k[i,j,m] + 4*F4k[i,j,m]*q2[j])*A1[i,j,m] - 2*F2k[i,j,m]*B1[i,j,m]) - 2*F2k[i,j,m]*P2[i]*A1[i,j,m]*B2[i,j,m] + 4*sqrt(P2[i]*q2[j])*(F2k[i,j,m] + F3k[i,j,m]*q2[j])*meshz[m]*(A2[i,j,m]*B1[i,j,m] - A1[i,j,m]*B2[i,j,m]) - 2*P2[i]*q2[j]*meshz[m]^2*(2*F4k[i,j,m]*A1[i,j,m]*A2[i,j,m] + F3k[i,j,m]*A2[i,j,m]*B1[i,j,m] + F3k[i,j,m]*A1[i,j,m]*B2[i,j,m]) - 4*F1k[i,j,m]*(q2[j]*A1[i,j,m]*A2[i,j,m] + B1[i,j,m]*B2[i,j,m]))
         end
     end

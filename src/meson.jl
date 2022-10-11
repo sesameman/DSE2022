@@ -95,7 +95,9 @@ elseif dataset["mesonBSE"]["mesonmode"] == 2
 elseif dataset["mesonBSE"]["mesonmode"] == 3
     println("将计算vectormeson")
     include(joinpath(pwd(),"src/equations/vectormeson.jl"))
+elseif dataset["mesonBSE"]["mesonmode"] == 4
+    println("将计算avmeson")
+    include(joinpath(pwd(),"src/equations/avmeson.jl"))
 end # if for mode
-
 
 end # module

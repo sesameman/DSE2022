@@ -280,7 +280,7 @@ Threads.@threads for i=1:length(meshk)
 end
 
 # 加一个尾巴
-if dataset["mesonBSE"]["tailed"]==1
+if dataset["mesonBSE"]["epsilon"]!=0
 Threads.@threads for i = 1:length(meshk)
     k2 = meshk[i]
     for s = 1:length(meshz)
@@ -296,8 +296,6 @@ Threads.@threads for i = 1:length(meshk)
                 B1in = B1[j,m]
                 B2in = B2[j,m]
                 allweight = -weightzq*weightq2*q2/(16*pi^3)/((P2/4+q2+sqrt(P2*q2)*zq)*A1in^2+B1in^2)/((P2/4+q2-sqrt(P2*q2)*zq)*A2in^2+B2in^2)*z2^2*epsilon
-
-                矢量介子的kernel尾巴如下所示
 
                 kernel11(y) = 0
                 

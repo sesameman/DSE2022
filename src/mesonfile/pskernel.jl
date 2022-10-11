@@ -71,7 +71,7 @@ Threads.@threads for i = 1:length(meshk)
 end
 
 # 加一个尾巴
-if dataset["mesonBSE"]["tailed"]==1
+if dataset["mesonBSE"]["epsilon"]!=0
 Threads.@threads for i = 1:length(meshk)
     k2 = meshk[i]
     for s = 1:length(meshz)
