@@ -43,10 +43,10 @@ repoint = 19.0
 quarkmass = 0.0036
 
 [mesonBSE]
-epsilon = 1
-kstep = 128
+epsilon = 0
+kstep = 128 
 zstep = 8
-Pstep = 10
+Pstep = 20
 test = true
 logofcutoff = 4
 # meson mode document
@@ -63,8 +63,8 @@ bigm = 1
 # masscutoff = 7
 
 [readsetting]
-readmode = 1
-kstep = 32
+readmode = 3
+kstep = 128
 zstep = 8
 Pstep = 10
 logofcutoff = 4

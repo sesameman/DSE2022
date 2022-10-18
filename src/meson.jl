@@ -45,6 +45,10 @@ if Pstep == 10
     plist = [0.1*j for j=1:10]
 end 
 
+if Pstep == 20
+    plist = [0.001+0.05*(j-1) for j=1:20]
+end 
+
 meshk,weightk= gausslegendremesh(cutdown,cutup,kstep,2);
 meshz,weightz= gausschebyshev(zstep,2);
 

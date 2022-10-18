@@ -5,6 +5,8 @@ elseif dataset["mesonBSE"]["mesonmode"] == 2
     kernel=Array{Float64}(undef,kstep , zstep, kstep, zstep, 4, 4)
 elseif dataset["mesonBSE"]["mesonmode"] == 3
     kernel=Array{Float64}(undef,kstep , zstep, kstep, zstep, 8, 8)
+elseif dataset["mesonBSE"]["mesonmode"] == 4
+    kernel=Array{Float64}(undef,kstep , zstep, kstep, zstep, 8, 8)
 end
 A1=Array{Float64}(undef,kstep,zstep);
 B1=Array{Float64}(undef,kstep,zstep);
